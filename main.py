@@ -73,6 +73,27 @@ def ex3(r1,r2):
 
     return False
 
-ex3(((0,100),(1,24),(10,10),(10,10)),((0,100),(1,24),(100,0),(1,25)))
 
+def ex4(**kwargs):
+    colidables = []
+    items = list(kwargs.items())
+    for i, (n1, r1) in enumerate(items):
+       for ( n2, r2) in items[i+1:]:
+            if n1 == n2:
+               continue
+            if (type(r1) != tuple or type(r2)!= tuple):
+                print("not a tuple")
+                return None
 
+            for coordenate in r1:
+                cl = r2[0]
+                cr = r2[2]
+                if( coordenate[0] >= cl[0] and coordenate[0] <= cr[0] and coordenate[1] <= cl[1] and coordenate[1] >= cr[1] ):
+                    tup = (n1,n2)
+                    colidables.append(tup)
+                    break
+    
+    print(colidables)
+    return colidables
+
+            
