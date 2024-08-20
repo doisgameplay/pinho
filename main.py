@@ -61,6 +61,12 @@ def ex3(r1,r2):
     if (type(r1) != tuple or type(r2)!= tuple):
         print("not a tuple")
         return None
+    if(type(r1[0]) != float and type(r1[0]) != int or type(r1[1]) != float and type(r1[1]) != int):
+        print("problem with the coordenates of rectangle number 1")
+        return None
+    if(type(r2[0]) != float and type(r2[0]) != int or type(r2[1]) != float and type(r2[1]) != int):
+        print("problem with the coordenates of rectangle number 2")
+        return None
 
     for coordenate in r1:
         #print("asd")
@@ -79,11 +85,21 @@ def ex4(**kwargs):
     items = list(kwargs.items())
     for i, (n1, r1) in enumerate(items):
        for ( n2, r2) in items[i+1:]:
+            if (type(r1) != tuple or type(r2)!= tuple):
+                print("not a tuple")
+                return None
             if n1 == n2:
                continue
             if (type(r1) != tuple or type(r2)!= tuple):
                 print("not a tuple")
                 return None
+            if(type(r1[0]) != float and type(r1[0]) != int or type(r1[1]) != float and type(r1[1]) != int):
+                print("problem with the coordenates of rectangle number 1")
+                return None
+            if(type(r2[0]) != float and type(r2[0]) != int or type(r2[1]) != float and type(r2[1]) != int):
+                print("problem with the coordenates of rectangle number 2")
+                return None    
+            
 
             for coordenate in r1:
                 cl = r2[0]
