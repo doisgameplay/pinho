@@ -61,8 +61,18 @@ def ex3(r1,r2):
     if (type(r1) != tuple or type(r2)!= tuple):
         print("not a tuple")
         return None
-    
 
-ex3(((1,2),(1,24),(1,32),(1,25)),((1,2),(1,24),(1,32),(1,25)))
+    for coordenate in r1:
+        #print("asd")
+        cl = r2[0]
+        cr = r2[2]
+        print(coordenate[0], coordenate[1]) 
+        print(cl,cr)
+        if( coordenate[0] >= cl[0] and coordenate[0] <= cr[0] and coordenate[1] <= cl[1] and coordenate[1] >= cr[1] ):
+            return True
+
+    return False
+
+ex3(((0,100),(1,24),(10,10),(10,10)),((0,100),(1,24),(100,0),(1,25)))
 
 
