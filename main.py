@@ -57,5 +57,12 @@ def ex2(m,n):
         print(l)
     
 
-ex2(3,5)
+def ex3(r1,r2):
+    if (type(r1) != tuple or type(r2)!= tuple):
+        print("not a tuple")
+        return None
+    
+
+ex3(((1,2),(1,24),(1,32),(1,25)),((1,2),(1,24),(1,32),(1,25)))
+
 
